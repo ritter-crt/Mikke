@@ -1,71 +1,77 @@
-'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const Nav = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const genericLine = `h-0.5 w-9 my-1 bg-black transition ease transform duration-300`;
+function NavBar() {
+  const [navbar, setNavbar] = useState(false);
   return (
     <div>
-      <nav className="w-full bg-gray-100 fixed top-0 left-0 right-0 z-10">
-        <div className="flex-items-center justify-between py-3 md:py-5 md:block">
-          {/* MOBILE NAVIGATION*/}
-          <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            {/* lines */}
-            <div justify-end left-10 py-6>
-              <div
-                className={`${genericLine} ${
-                  isOpen ? 'rotate-45 translate-y-5  ' : ' rotate-0 '
-                }`}
-              />
-              <div
-                className={`${genericLine} ${
-                  isOpen ? 'opacity-0' : 'opacity-100 '
-                }`}
-              />
-              <div
-                className={`${genericLine} ${
-                  isOpen ? '-rotate-45' : 'opacity-100 '
-                }`}
-              />
+      <nav className="w-full bg-black fixed top-0 left-0 right-0 z-10">
+        <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+          <div>
+            <div className="flex items-center justify-between py-3 md:py-5 md:block">
+              {/* LOGO */}
+              <Link href="/">
+                <h2 className="w-1/5 px-10">MIKKE</h2>
+              </Link>
+              {/* HAMBURGER BUTTON FOR MOBILE */}
+              <div className="md:hidden">
+                <div className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
+                  {/* lines */}
+
+                  <div
+                    className={`${genericLine} ${
+                      isOpen ? 'rotate-45 translate-y-5  ' : ' rotate-0 '
+                    }`}
+                  />
+                  <div
+                    className={`${genericLine} ${
+                      isOpen ? 'opacity-0' : 'opacity-100 '
+                    }`}
+                  />
+                  <div
+                    className={`${genericLine} ${
+                      isOpen ? '-rotate-45' : 'opacity-100 '
+                    }`}
+                  />
+                </div>
+              </div>
             </div>
           </div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              isOpen ? 'p-4 md:p-0 block' : 'hidden'
-            }`}
-          >
-            <ul
-              className="flex flex-col h-screen md:h-auto items-center md:flex"
-              open={isOpen}
+          <div>
+            <div
+              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+                navbar ? 'p-12 md:p-0 block' : 'hidden'
+              }`}
             >
-              <Link
-                href="/"
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-black no-underline uppercase font-hairline p-2"
-              >
-                Home
-              </Link>
-              <Link
-                href="/item-page"
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-black no-underline uppercase font-hairline p-2"
-              >
-                Shirts
-              </Link>
-              <Link
-                href="/about"
-                onClick={() => setIsOpen(!isOpen)}
-                className="text-black no-underline uppercase font-hairline p-2"
-              >
-                About
-              </Link>
-            </ul>
+              <ul className="h-screen md:h-auto items-center justify-center md:flex ">
+                <li className="pb-6 text-xl text-white py-2 md:px-6 text-center border-b-2 md:border-b-0  hover:bg-purple-900  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                    About
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
+                    Blogs
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
+                    Contact
+                  </Link>
+                </li>
+                <li className="pb-6 text-xl text-white py-2 px-6 text-center  border-b-2 md:border-b-0  hover:bg-purple-600  border-purple-900  md:hover:text-purple-600 md:hover:bg-transparent">
+                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
+                    Projects
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
     </div>
   );
-};
+}
 
-export default Nav;
+export default NavBar;
