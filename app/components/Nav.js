@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const genericLine = `h-0.5 w-8 my-1 rounded-full bg-black transition ease transform duration-300`;
+  const genericLine = `h-0.5 w-8 my-1 bg-gray-700 transition ease transform duration-500`;
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
@@ -51,17 +51,17 @@ function Nav() {
           >
             <ul className="h-screen md:h-auto items-center justify-center md:flex ">
               <li className="text-sm text-black  md:px-6 text-center">
-                <Link href="#about" onClick={toggleMenu}>
+                <Link href="/about" onClick={toggleMenu}>
                   About
                 </Link>
               </li>
               <li className="text-sm text-black  md:px-6 text-center">
-                <Link href="#blog" onClick={toggleMenu}>
-                  Blogs
+                <Link href="/item-page" onClick={toggleMenu}>
+                  Items
                 </Link>
               </li>
               <li className="text-sm text-black  md:px-6 text-center">
-                <Link href="#contact" onClick={toggleMenu}>
+                <Link href="/" onClick={toggleMenu}>
                   Contact
                 </Link>
               </li>
