@@ -1,4 +1,5 @@
 'use client';
+import { navLinks } from '@/constants';
 import Link from 'next/link';
 import { useState } from 'react';
 
@@ -17,7 +18,6 @@ function Nav() {
             <h2 className="">MIKKE</h2>
           </Link>
           {/* HAMBURGER BUTTON FOR MOBILE */}
-
           <div className="md:hidden" onClick={toggleMenu}>
             {/* lines */}
             <button
@@ -42,29 +42,24 @@ function Nav() {
             </button>
           </div>
         </div>
-
         <div>
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
               isOpen ? 'md:p-0 block' : 'hidden'
             }`}
           >
+            {/* NAV LINKS */}
             <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-              <li className="text-lg font-montserrat text-black tracking-wider md:px-12 py-5 text-center">
-                <Link href="#about" onClick={toggleMenu}>
-                  About
-                </Link>
-              </li>
-              <li className="text-lg font-montserrat text-black tracking-wider md:px-12 py-5 text-center">
-                <Link href="#blog" onClick={toggleMenu}>
-                  Blogs
-                </Link>
-              </li>
-              <li className="text-lg font-montserrat text-black tracking-wider md:px-12 py-5 text-center">
-                <Link href="#contact" onClick={toggleMenu}>
-                  Contact
-                </Link>
-              </li>
+              {navLinks.map((link) => (
+                <li
+                  key={link.label}
+                  className="text-lg font-montserrat font-thin uppercase text-black tracking-widest md:px-12 py-5 text-center"
+                >
+                  <Link href={link.href} onClick={toggleMenu}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
