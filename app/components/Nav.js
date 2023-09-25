@@ -46,21 +46,21 @@ function Nav() {
         <div>
           <div
             className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              isOpen ? 'p-12 md:p-0 block' : 'hidden'
+              isOpen ? 'md:p-0 block' : 'hidden'
             }`}
           >
             <ul className="h-screen md:h-auto items-center justify-center md:flex ">
-              <li className="text-sm text-black  md:px-6 text-center">
+              <li className="text-lg font-montserrat text-black tracking-wider md:px-12 py-5 text-center">
                 <Link href="#about" onClick={toggleMenu}>
                   About
                 </Link>
               </li>
-              <li className="text-sm text-black  md:px-6 text-center">
+              <li className="text-lg font-montserrat text-black tracking-wider md:px-12 py-5 text-center">
                 <Link href="#blog" onClick={toggleMenu}>
                   Blogs
                 </Link>
               </li>
-              <li className="text-sm text-black  md:px-6 text-center">
+              <li className="text-lg font-montserrat text-black tracking-wider md:px-12 py-5 text-center">
                 <Link href="#contact" onClick={toggleMenu}>
                   Contact
                 </Link>
