@@ -1,32 +1,36 @@
 'use client';
 import { navLinks } from '@/constants';
+import { mikkeLogo } from '@/public/assets/icons';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
 function Nav() {
   const [isOpen, setIsOpen] = useState(false);
-  const genericLine = `h-0.5 w-8 my-1 rounded-full bg-black transition ease transform duration-300`;
+  const genericLine = `h-0.2 w-6 my-[0.18rem] rounded-full bg-black transition ease transform duration-300`;
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="w-full  fixed top-0 left-0 right-0 z-10 bg-slate-300">
-      <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
-        <div className="flex items-center justify-between py-3 md:py-5 md:block">
+    <nav className="w-full fixed z-10">
+      <div className="justify-between px-4 py-2  mx-auto lg:max-w-7xl md:items-center md:flex md:px-6 md:py-0 bg-white/90 md:bg-transparent">
+        <div className="flex items-center justify-between md:py-5 md:block">
           {/* LOGO */}
-          <Link href="/">
-            <h2 className="">MIKKE</h2>
-          </Link>
+          <div className="w-12 md:w-16 lg:w-20">
+            <Link href="/">
+              <Image src={mikkeLogo} alt="Logo" objectFit="contain" />
+            </Link>
+          </div>
           {/* HAMBURGER BUTTON FOR MOBILE */}
           <div className="md:hidden" onClick={toggleMenu}>
             {/* lines */}
             <button
-              className="flex flex-col h-12 w-12  justify-center items-center group"
+              className="flex flex-col h-10 w-5  justify-center items-center group"
               onClick={toggleMenu}
             >
               <div
                 className={`${genericLine} ${
-                  isOpen ? 'rotate-45 translate-y-2.5 ' : 'rotate-0'
+                  isOpen ? 'rotate-45 translate-y-[0.44rem] ' : 'rotate-0'
                 }`}
               />
               <div
@@ -36,7 +40,7 @@ function Nav() {
               />
               <div
                 className={`${genericLine} ${
-                  isOpen ? '-rotate-45 -translate-y-2.5 ' : 'opacity-100'
+                  isOpen ? '-rotate-45 -translate-y-[0.44rem] ' : 'opacity-100'
                 }`}
               />
             </button>
@@ -44,16 +48,16 @@ function Nav() {
         </div>
         <div>
           <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
+            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:py-0 md:mt-0 ${
               isOpen ? 'md:p-0 block' : 'hidden'
             }`}
           >
             {/* NAV LINKS */}
-            <ul className="h-screen md:h-auto items-center justify-center md:flex ">
+            <ul className="relative h-screen md:h-auto items-center content-center md:flex ">
               {navLinks.map((link) => (
                 <li
                   key={link.label}
-                  className="text-lg font-montserrat font-thin uppercase text-black tracking-widest md:px-12 py-5 text-center"
+                  className="text-2xs font-montserrat font-thin text-black tracking-widest md:pl-8 py-3 text-center"
                 >
                   <Link href={link.href} onClick={toggleMenu}>
                     {link.label}

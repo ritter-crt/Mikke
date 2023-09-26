@@ -8,6 +8,7 @@ module.exports = {
   theme: {
     fontSize: {
       xs: ['12px', '16px'],
+      '2xs': ['13px', '18px'],
       sm: ['14px', '20px'],
       base: ['16px', '19.5px'],
       lg: ['18px', '21.94px'],
@@ -34,6 +35,9 @@ module.exports = {
       },
       screens: {
         wide: '1440px',
+      },
+      height: {
+        0.2: '0.07rem',
       },
     },
   },
