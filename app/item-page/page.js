@@ -1,9 +1,0 @@
-const page = () => {
-  return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>These are Mikke Shirts</h1>
-    </main>
-  );
-};
-
-export default page;

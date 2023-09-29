@@ -54,10 +54,20 @@ function Nav() {
           >
             {/* NAV LINKS */}
             <ul className="relative h-screen md:h-auto items-center content-center md:flex ">
-              {navLinks.map((link) => (
+              {navLinks.slice(0, 3).map((link) => (
                 <li
                   key={link.label}
                   className="text-2xs font-montserrat font-thin text-black tracking-widest md:pl-8 py-3 text-center"
+                >
+                  <Link href={link.href} onClick={toggleMenu}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+              {navLinks.slice(3, 6).map((link) => (
+                <li
+                  key={link.label}
+                  className="text-2xs font-montserrat font-thin text-gray-400 tracking-widest md:pl-8 py-3 text-center"
                 >
                   <Link href={link.href} onClick={toggleMenu}>
                     {link.label}
