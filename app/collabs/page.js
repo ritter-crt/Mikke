@@ -1,11 +1,11 @@
-import Footer from '@/components/Footer';
+import React from 'react';
 
-const page = () => {
+const Collabs = () => {
   return (
     <main className="flex min-h-screen flex-col font-thin uppercase items-center justify-between p-24">
-      <h1>This is About Mikke</h1>
+      <h1>Collabs</h1>
     </main>
   );
 };
 
-export default page;
+export default Collabs;
