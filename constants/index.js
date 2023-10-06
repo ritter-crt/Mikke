@@ -7,3 +7,9 @@ export const navLinks = [
   { href: '/lookbook', label: 'Lookbook' },
   { href: '/contact', label: 'Contact' },
 ];
+
+export const footerLinks = [
+  { href: '/about-the-brand', label: 'About the Brand' },
+  { href: '/shipping', label: 'Shipping' },
+  { href: '/return-policy', label: 'Return Policy' },
+];

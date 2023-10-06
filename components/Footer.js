@@ -1,37 +1,29 @@
+import { footerLinks } from '@/constants';
 import React from 'react';
 
 const Footer = () => {
   return (
-    <div className="w-full min-h-24 flex items-center justify-center bg-black">
-      <div className="flex w-full">
-        <div className="md:px-8 w-full px-4 text-white flex flex-col">
-          <div className="w-1/3 text-7xl font-bold">
-            <h1 className="md:w-2/3 text-bold text-4xl pt-4">Say Hi</h1>
-            <p className="w-full md:w-2/3 text-gray-400">something@gmail.com</p>
-          </div>
-          <div className="flex flex-col">
-            <div className="flex mb-12 flex-col text-right">
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                About
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Services
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Why us
-              </a>
-              <a className="hidden md:block cursor-pointer text-gray-600 hover:text-white uppercase">
-                Contact
-              </a>
-            </div>
-            <hr className="border-white" />
-            <p className="w-full text-right mt-4 mb-8 tracking-widest font-thin text-white">
-              Copyright © 2023 Mikke Studio
-            </p>
-          </div>
+    <>
+      <hr className="border-gray-200 w-screen "></hr>
+
+      <div className="flex px-4 md:px-8 font-montserrat text-xs md:text-2xs font-thin tracking-wide">
+        <div className="flex flex-col md:w-1/3 w-3/4 border-r border-gray-200 mt-8 h-24">
+          <p className="my-2">Have a question?</p>
+          <p className="font-normal my-2">Contact us at some@gmail.com</p>
+          <div className="flex flex-row my-2">Instagram</div>
+        </div>
+
+        <div className="flex flex-col mt-8">
+          {footerLinks.map((link) => (
+            <div className="flex flex-row my-2 md:ml-16 ml-4">{link.label}</div>
+          ))}
         </div>
       </div>
-    </div>
+
+      <div className="text-xs font-montserrat font-thin w-full text-center mt-8 mb-4 text-black">
+        Copyright © 2023 Mikke Studio
+      </div>
+    </>
   );
 };
 

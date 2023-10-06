@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-function Nav() {
+const Nav = () => {
   const [isOpen, setIsOpen] = useState(false);
   const genericLine = `h-0.2 w-6 my-[0.18rem] rounded-full bg-black transition ease transform duration-300`;
   const toggleMenu = () => {
@@ -80,6 +80,6 @@ function Nav() {
       </div>
     </nav>
   );
-}
+};
 
 export default Nav;
