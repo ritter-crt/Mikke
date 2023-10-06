@@ -13,7 +13,7 @@ function Nav() {
   };
   return (
     <nav className="w-full fixed z-10">
-      <div className="justify-between px-4 py-2  mx-auto lg:max-w-7xl md:items-center md:flex md:px-6 md:py-0 bg-white/90 md:bg-transparent">
+      <div className="justify-between px-2 py-2 mx-auto lg:max-w-10xl md:items-center md:flex md:px-6 md:py-0 bg-white/90 md:bg-transparent">
         <div className="flex items-center justify-between md:py-5 md:block">
           {/* LOGO */}
           <div className="w-12 md:w-16 lg:w-20">
@@ -67,7 +67,7 @@ function Nav() {
               {navLinks.slice(3, 6).map((link) => (
                 <li
                   key={link.label}
-                  className="text-2xs font-montserrat font-thin text-gray-400 tracking-widest md:pl-8 py-3 text-center"
+                  className="text-2xs font-montserrat font-thin text-black tracking-widest md:pl-8 py-3 text-center"
                 >
                   <Link href={link.href} onClick={toggleMenu}>
                     {link.label}
