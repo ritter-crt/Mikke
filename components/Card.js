@@ -11,14 +11,13 @@ const Card = ({ shirts }) => {
         return (
           <div>
             <Image
-              onClick={() => router.push(`/collared-shirts/${shirt._id}`)}
+              onClick={() => router.push(`/collared-shirts/${shirt.id}`)}
               src={shirt.images[0]}
               width={300}
               height={300}
               priority={true}
               alt={shirt.description}
             />
-            <p>{shirt.title}</p>
             <div>
               <p>{shirt.title}</p>
               <p>{shirt.price} €</p>

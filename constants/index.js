@@ -30,7 +30,7 @@ export const footerLinks = [
 // COLLARED SHIRTS WRITE UP
 export const shirts = [
   {
-    _id: 1,
+    id: 1,
     images: [Mirta_1, Mirta_2, Mirta_3, Mirta_4],
     title: 'Mirta collared shirt',
     description:
@@ -43,7 +43,7 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 2,
+    id: 2,
     images: [
       Mirta_fringe_1,
       Mirta_fringe_2,
@@ -61,7 +61,7 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 3,
+    id: 3,
     images: [not_found],
     title: 'Lotti',
     description:
@@ -73,7 +73,7 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 4,
+    id: 4,
     images: [not_found],
     title: 'Dill pleated',
     description:
@@ -85,7 +85,7 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 5,
+    id: 5,
     images: [not_found],
     title: 'Charismatic pleated',
     description:
@@ -97,7 +97,7 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 6,
+    id: 6,
     images: [not_found],
     title: 'Andrea',
     description:
@@ -116,7 +116,7 @@ export const shirts = [
   },
 
   {
-    _id: 7,
+    id: 7,
     images: [not_found],
     title: 'Tory',
     description:
@@ -129,7 +129,7 @@ export const shirts = [
     price: 130,
   },
   {
-    _id: 8,
+    id: 8,
     images: [not_found],
     title: 'Ira',
     description:
@@ -141,7 +141,7 @@ export const shirts = [
     price: 150,
   },
   {
-    _id: 9,
+    id: 9,
     title: 'Sally',
     images: [not_found],
     description: '3/4 sleeve with shorter front body. Comfy oversized fit',
@@ -152,7 +152,7 @@ export const shirts = [
     price: 0,
   },
   {
-    _id: 10,
+    id: 10,
     title: 'Sammi',
     images: [not_found],
     description:
@@ -164,7 +164,7 @@ export const shirts = [
     price: 0,
   },
   {
-    _id: 11,
+    id: 11,
     title: 'Marta',
     images: [not_found],
     description: '3/4 sleeve collared shirt dress',
@@ -175,7 +175,7 @@ export const shirts = [
     price: 120,
   },
   {
-    _id: 12,
+    id: 12,
     title: 'Sal',
     images: [not_found],
     description: 'Oversized wide and long collared shirt. Comfy fit.',
@@ -186,7 +186,7 @@ export const shirts = [
     price: 120,
   },
   {
-    _id: 13,
+    id: 13,
     title: 'Zaks',
     images: [not_found],
     description:

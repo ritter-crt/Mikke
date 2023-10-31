@@ -5,15 +5,11 @@ import React from 'react';
 
 const ShirtPage = () => {
   const router = useRouter();
-  // const shirtTitle = router.query.shirt;
+  const shirtTitle = router.query.id;
 
   // const shirt = shirts.find((shirt) => shirt.id === shirtTitle);
   // const shirtIdx = shirts.findIndex((shirt) => v._id === shirtTitle);
-  return (
-    <main>
-      <h1>{router.query.id}</h1>
-    </main>
-  );
+  return <main></main>;
 };
 
 export default ShirtPage;
