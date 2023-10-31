@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { Ira_1, Lotti_1 } from '@/public/assets/shirts';
-import { collaredShirts } from '@/constants';
+import { shirts } from '@/constants';
+import Card from '@/components/Card';
 
 const CollaredShirts = () => {
   return (
@@ -8,11 +9,7 @@ const CollaredShirts = () => {
       <h1 className=" font-thin uppercase items-center justify-between p-24">
         Collared Shirts
       </h1>
-      <div>
-        {collaredShirts.map((shirt) => (
-          <div>{shirt.title}</div>
-        ))}
-      </div>
+      <Card shirts={shirts}></Card>
     </main>
   );
 };
