@@ -28,7 +28,7 @@ export const footerLinks = [
 ];
 
 // COLLARED SHIRTS WRITE UP
-export const collaredShirts = [
+export const shirts = [
   {
     _id: 1,
     images: [Mirta_1, Mirta_2, Mirta_3, Mirta_4],
@@ -74,7 +74,7 @@ export const collaredShirts = [
   },
   {
     _id: 4,
-    images: [],
+    images: [not_found],
     title: 'Dill pleated',
     description:
       'Charismatic and loud due to pleats in the front .  Oversized silhouette with mandarine collar',
@@ -86,7 +86,7 @@ export const collaredShirts = [
   },
   {
     _id: 5,
-    images: [],
+    images: [not_found],
     title: 'Charismatic pleated',
     description:
       'Charismatic and loud due to pleats in the front .  Oversized silhouette with mandarine collar',
@@ -98,7 +98,7 @@ export const collaredShirts = [
   },
   {
     _id: 6,
-    images: [],
+    images: [not_found],
     title: 'Andrea',
     description:
       'Regular fit with hidden buttons and classic collar. Comes in two fabrics , cotton and silk',
@@ -117,7 +117,7 @@ export const collaredShirts = [
 
   {
     _id: 7,
-    images: [],
+    images: [not_found],
     title: 'Tory',
     description:
       'Modernist feel , decluttered design. A version of the camp collar. A bit longer silhouette with regular fit shoulders. Slits with buttons on the sides.',
@@ -130,7 +130,7 @@ export const collaredShirts = [
   },
   {
     _id: 8,
-    images: [],
+    images: [not_found],
     title: 'Ira',
     description:
       'Our most fitted shirt. Ira feels businessy and confident. Slim fit',
@@ -143,6 +143,7 @@ export const collaredShirts = [
   {
     _id: 9,
     title: 'Sally',
+    images: [not_found],
     description: '3/4 sleeve with shorter front body. Comfy oversized fit',
     sizeGuide: 'Model is 175cm and wearing medium size.',
     colors: ['all season white , black and spring summer: white and turquoise'],
@@ -153,6 +154,7 @@ export const collaredShirts = [
   {
     _id: 10,
     title: 'Sammi',
+    images: [not_found],
     description:
       'regular long fit with classic collar . Pleated in the middle of the front. Modern cowboy vibe .',
     sizeGuide: 'Model is 175cm and wearing medium size',
@@ -164,6 +166,7 @@ export const collaredShirts = [
   {
     _id: 11,
     title: 'Marta',
+    images: [not_found],
     description: '3/4 sleeve collared shirt dress',
     sizeGuide: 'Model is 177cm and wearing medium size',
     colors: ['navy blue'],
@@ -174,6 +177,7 @@ export const collaredShirts = [
   {
     _id: 12,
     title: 'Sal',
+    images: [not_found],
     description: 'Oversized wide and long collared shirt. Comfy fit.',
     sizeGuide: 'Model is 177cm and wearing medium size',
     colors: ['navy blue'],
@@ -184,6 +188,7 @@ export const collaredShirts = [
   {
     _id: 13,
     title: 'Zaks',
+    images: [not_found],
     description:
       'Slim fit classic collared shirt with black fabric detailing on cuffs and inside the collar.',
     sizeGuide: 'Model is 175cm and wearing medium size',
