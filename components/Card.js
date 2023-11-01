@@ -6,27 +6,34 @@ import React from 'react';
 const Card = ({ shirts }) => {
   const router = useRouter();
   return (
-    <div>
+    <>
       {shirts.map((shirt) => {
         return (
           <div>
-            <Image
-              onClick={() => router.push(`/collared-shirts/${shirt._id}`)}
-              src={shirt.images[0]}
-              width={300}
-              height={300}
-              priority={true}
-              alt={shirt.description}
-            />
-            <p>{shirt.title}</p>
-            <div>
-              <p>{shirt.title}</p>
-              <p>{shirt.price} €</p>
+            <div className="h-60 md:h-96 relative w-full">
+              <Image
+                onClick={() => router.push(`/collared-shirts/${shirt.id}`)}
+                src={shirt.images[0]}
+                alt={shirt.description}
+                fill={true}
+                sizes="10%"
+                priority={true}
+                objectFit="cover"
+              />
             </div>
+            <div className="text-center md:flex md:justify-between items-center font-light text-xs md:text-sm my-4 md:mt-4">
+              <div className="my-2">{shirt.title}</div>
+              <div>{shirt.price} €</div>
+            </div>
+            {/* <div className="text-xs font-thin">{shirt.material}</div> */}
+            {/* <div className="flex justify-center gap-2">
+              <div className="h-4 w-4 bg-pink-100"></div>
+              <div className="h-4 w-4 bg-blue-400"></div>
+            </div> */}
           </div>
         );
       })}
-    </div>
+    </>
   );
 };
 

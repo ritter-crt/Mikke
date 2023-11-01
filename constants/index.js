@@ -1,4 +1,13 @@
 import {
+  Andrea_slim_1,
+  Dill_1,
+  Dill_2,
+  Ira_1,
+  Ira_2,
+  Ira_3,
+  Lotti_1,
+  Lotti_2,
+  Lotti_3,
   Mirta_1,
   Mirta_2,
   Mirta_3,
@@ -8,6 +17,15 @@ import {
   Mirta_fringe_3,
   Mirta_fringe_4,
   Mirta_fringe_5,
+  Sal_1,
+  Sally_1,
+  Sally_2,
+  Sammi_1,
+  Sammi_2,
+  Sammi_3,
+  Sammi_4,
+  Zaks_1,
+  Zaks_2,
   not_found,
 } from '@/public/assets/shirts';
 
@@ -30,7 +48,7 @@ export const footerLinks = [
 // COLLARED SHIRTS WRITE UP
 export const shirts = [
   {
-    _id: 1,
+    id: 1,
     images: [Mirta_1, Mirta_2, Mirta_3, Mirta_4],
     title: 'Mirta collared shirt',
     description:
@@ -43,7 +61,7 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 2,
+    id: 2,
     images: [
       Mirta_fringe_1,
       Mirta_fringe_2,
@@ -61,8 +79,8 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 3,
-    images: [not_found],
+    id: 3,
+    images: [Lotti_1, Lotti_2, Lotti_3],
     title: 'Lotti',
     description:
       'Regular color and fit with slightly boxy shoulders. Glass beaded fringe on the back. Suede fabric',
@@ -73,8 +91,8 @@ export const shirts = [
     price: 90,
   },
   {
-    _id: 4,
-    images: [not_found],
+    id: 4,
+    images: [Dill_1, Dill_2],
     title: 'Dill pleated',
     description:
       'Charismatic and loud due to pleats in the front .  Oversized silhouette with mandarine collar',
@@ -84,21 +102,10 @@ export const shirts = [
     material: ['95% cotton, 5% elastane'],
     price: 90,
   },
+
   {
-    _id: 5,
-    images: [not_found],
-    title: 'Charismatic pleated',
-    description:
-      'Charismatic and loud due to pleats in the front .  Oversized silhouette with mandarine collar',
-    sizeGuide: 'Model is 174 cm. Wide but not long fit.',
-    colors: ['white', 'sky blue', 'navy blue', 'black'],
-    sizes: ['one-size'],
-    material: ['95% cotton, 5% elastane'],
-    price: 90,
-  },
-  {
-    _id: 6,
-    images: [not_found],
+    id: 6,
+    images: [Andrea_slim_1],
     title: 'Andrea',
     description:
       'Regular fit with hidden buttons and classic collar. Comes in two fabrics , cotton and silk',
@@ -116,7 +123,7 @@ export const shirts = [
   },
 
   {
-    _id: 7,
+    id: 7,
     images: [not_found],
     title: 'Tory',
     description:
@@ -129,8 +136,9 @@ export const shirts = [
     price: 130,
   },
   {
-    _id: 8,
-    images: [not_found],
+    id: 8,
+    images: [Ira_1, Ira_2, Ira_3],
+
     title: 'Ira',
     description:
       'Our most fitted shirt. Ira feels businessy and confident. Slim fit',
@@ -141,9 +149,9 @@ export const shirts = [
     price: 150,
   },
   {
-    _id: 9,
+    id: 9,
     title: 'Sally',
-    images: [not_found],
+    images: [Sally_1, Sally_2],
     description: '3/4 sleeve with shorter front body. Comfy oversized fit',
     sizeGuide: 'Model is 175cm and wearing medium size.',
     colors: ['all season white , black and spring summer: white and turquoise'],
@@ -152,9 +160,9 @@ export const shirts = [
     price: 0,
   },
   {
-    _id: 10,
+    id: 10,
     title: 'Sammi',
-    images: [not_found],
+    images: [Sammi_1, Sammi_2, Sammi_3, Sammi_4],
     description:
       'regular long fit with classic collar . Pleated in the middle of the front. Modern cowboy vibe .',
     sizeGuide: 'Model is 175cm and wearing medium size',
@@ -164,7 +172,7 @@ export const shirts = [
     price: 0,
   },
   {
-    _id: 11,
+    id: 11,
     title: 'Marta',
     images: [not_found],
     description: '3/4 sleeve collared shirt dress',
@@ -175,9 +183,9 @@ export const shirts = [
     price: 120,
   },
   {
-    _id: 12,
+    id: 12,
     title: 'Sal',
-    images: [not_found],
+    images: [Sal_1],
     description: 'Oversized wide and long collared shirt. Comfy fit.',
     sizeGuide: 'Model is 177cm and wearing medium size',
     colors: ['navy blue'],
@@ -186,9 +194,9 @@ export const shirts = [
     price: 120,
   },
   {
-    _id: 13,
+    id: 13,
     title: 'Zaks',
-    images: [not_found],
+    images: [Zaks_1, Zaks_2],
     description:
       'Slim fit classic collared shirt with black fabric detailing on cuffs and inside the collar.',
     sizeGuide: 'Model is 175cm and wearing medium size',
