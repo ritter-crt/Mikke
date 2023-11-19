@@ -21,11 +21,13 @@ const Card = ({ shirts }) => {
                 objectFit="cover"
               />
             </div>
-            <div className="text-center md:flex md:justify-between items-center font-light text-xs md:text-sm my-4 md:mt-4">
+            <div className="text-center md:flex md:justify-between items-center font-light text-xs md:text-sm mt-4 md:mt-4">
               <div className="my-2">{shirt.title}</div>
-              <div>{shirt.price} €</div>
+              {/* <div>{shirt.price} €</div> */}
             </div>
-            {/* <div className="text-xs font-thin">{shirt.material}</div> */}
+            <div className="text-center text-xxs font-thin">
+              {shirt.material}
+            </div>
             {/* <div className="flex justify-center gap-2">
               <div className="h-4 w-4 bg-pink-100"></div>
               <div className="h-4 w-4 bg-blue-400"></div>

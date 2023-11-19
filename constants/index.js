@@ -69,7 +69,7 @@ export const shirts = [
       Mirta_fringe_4,
       Mirta_fringe_5,
     ],
-    title: 'Mirta fridge',
+    title: 'Mirta fringe',
     description:
       'Wide-fit with long cuffs collared shirt. Glass beaded fringe on the back.',
     sizeGuide: 'Comes in two sizes due to its roomy fit.',
@@ -115,10 +115,7 @@ export const shirts = [
       'Silk version: lime green , black',
     ],
     sizes: ['small-medium', 'large-xlarge'],
-    material: [
-      'Cotton version: 95% cotton, 5% elastane',
-      'Silk version: 100% silk',
-    ],
+    material: ['Cotton: 95% cotton, 5% elastane ', 'Silk: 100% silk'],
     price: 110,
   },
 
