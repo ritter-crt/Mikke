@@ -26,8 +26,17 @@ import Sally_1 from './Sally1.jpg';
 import Sally_2 from './Sally2.jpg';
 import Zaks_1 from './Zaks1.jpeg';
 import Zaks_2 from './Zaks2.jpeg';
-
+import Tory_1 from './Tory1.jpg';
+import Tory_2 from './Tory2.jpg';
+import Tory_3 from './Tory3.jpg';
+import Tory_4 from './Tory4.jpg';
+import Lobster from './Lobster.jpg';
+import Avocado from './Avocado.jpg';
+import Cactus from './Cactus.jpg';
+import Chilli from './Chilli.jpg';
+import Smiley from './Smiley.jpg';
 import not_found from './not_found.jpg';
+import Hero from './Hero.jpg';
 
 export { Andrea_slim_1 };
 export { Dill_1, Dill_2 };
@@ -46,3 +55,7 @@ export { Sal_1 };
 export { Sally_1, Sally_2 };
 export { Zaks_1, Zaks_2 };
 export { not_found };
+export { Hero };
+export { Tory_1, Tory_2, Tory_3, Tory_4 };
+
+export { Lobster, Cactus, Chilli, Avocado };
