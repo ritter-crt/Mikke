@@ -12,7 +12,7 @@ const Nav = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <nav className="w-full fixed z-10">
+    <nav className="w-full fixed">
       <div className="justify-between px-4 py-2 mx-auto lg:max-w-10xl md:items-center md:flex md:px-6 md:py-0 bg-white">
         <div className="flex items-center justify-between md:py-5 md:block">
           {/* LOGO */}

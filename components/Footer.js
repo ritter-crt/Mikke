@@ -1,4 +1,5 @@
 import { footerLinks } from '@/constants';
+import Link from 'next/link';
 import React from 'react';
 
 const Footer = () => {
@@ -10,7 +11,12 @@ const Footer = () => {
         <div className="flex flex-col md:w-1/3 w-3/4 border-r border-gray-200 mt-8 h-24">
           <p className="my-2">Have a question?</p>
           <p className="font-normal my-2">Contact us at some@gmail.com</p>
-          <div className="flex flex-row my-2">Instagram</div>
+          <Link
+            href={'https://www.instagram.com/mikkestudio/'}
+            className="flex flex-row my-2"
+          >
+            Instagram
+          </Link>
         </div>
 
         <div className="flex flex-col mt-8">

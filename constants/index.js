@@ -24,9 +24,18 @@ import {
   Sammi_2,
   Sammi_3,
   Sammi_4,
+  Tory_1,
+  Tory_2,
+  Tory_3,
+  Tory_4,
   Zaks_1,
   Zaks_2,
   not_found,
+  Lobster,
+  Avocado,
+  Chilli,
+  Smiley,
+  Cactus,
 } from '@/public/assets/shirts';
 
 export const navLinks = [
@@ -121,7 +130,7 @@ export const shirts = [
 
   {
     id: 7,
-    images: [not_found],
+    images: [Tory_1, Tory_2, Tory_3, Tory_4],
     title: 'Tory',
     description:
       'Modernist feel , decluttered design. A version of the camp collar. A bit longer silhouette with regular fit shoulders. Slits with buttons on the sides.',
@@ -201,5 +210,57 @@ export const shirts = [
     sizes: ['white with black detailing', 'sky blue with black detailing'],
     material: ['?'],
     price: 120,
+  },
+];
+
+// COLLARED SHIRTS WRITE UP
+export const CollabShirts = [
+  {
+    id: 1,
+    images: [Lobster],
+    title: 'Lobster',
+    description: '',
+    colors: ['cream', 'black'],
+    sizes: ['small', 'medium'],
+    material: ['100% cotton'],
+    price: 90,
+  },
+  {
+    id: 2,
+    images: [Cactus],
+    title: 'Cactus',
+    description:
+      'Charismatic and loud due to pleats in the front .  Oversized silhouette with mandarine collar',
+    sizeGuide: 'Comes in two sizes due to its roomy fit.',
+    colors: ['white with blue fringe', 'white with green fringe'],
+    sizes: ['small', 'medium'],
+    material: ['95% cotton, 5% elastane'],
+    price: 90,
+  },
+  {
+    id: 3,
+    images: [Avocado],
+    title: 'Smiley',
+    description:
+      'Wide-fit with long cuffs collared shirt. Great for work & play. Versatile piece, can be styled with pants, skirts , outer layer and/or with a cozy sweater on top. Due to its roomy fit comes in two sizes .',
+    sizeGuide:
+      'this fit is more about length then weight . Taller ladies should get the medium.  Model in photo is 174 cm , wears size medium.',
+    colors: ['sky blue', 'navy blue', 'black'],
+    sizes: ['small', 'medium'],
+    material: ['95% cotton, 5% elastane'],
+    price: 90,
+  },
+  {
+    id: 4,
+    images: [Chilli],
+    title: 'Smiley',
+    description:
+      'Wide-fit with long cuffs collared shirt. Great for work & play. Versatile piece, can be styled with pants, skirts , outer layer and/or with a cozy sweater on top. Due to its roomy fit comes in two sizes .',
+    sizeGuide:
+      'this fit is more about length then weight . Taller ladies should get the medium.  Model in photo is 174 cm , wears size medium.',
+    colors: ['sky blue', 'navy blue', 'black'],
+    sizes: ['small', 'medium'],
+    material: ['95% cotton, 5% elastane'],
+    price: 90,
   },
 ];
