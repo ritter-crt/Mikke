@@ -36,7 +36,7 @@ import {
   Chilli,
   Smiley,
   Cactus,
-} from '@/public/assets/shirts';
+} from '@/public/assets/collared-shirts';
 
 export const navLinks = [
   { href: '/collared-shirts', label: 'Collared Shirts' },

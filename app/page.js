@@ -1,5 +1,5 @@
 import { CollabShirts, shirts } from '@/constants';
-import { Hero } from '@/public/assets/shirts';
+import { Hero } from '@/public/assets/collared-shirts';
 import Image from 'next/image';
 
 export default function Home() {

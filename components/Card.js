@@ -10,7 +10,7 @@ const Card = ({ shirts }) => {
       {shirts.map((shirt) => {
         return (
           <div>
-            <div className="h-60 md:h-96 relative w-full">
+            <div className="h-60 md:h-96 relative w-full -z-10">
               <Image
                 onClick={() => router.push(`/collared-shirts/${shirt.id}`)}
                 src={shirt.images[0]}

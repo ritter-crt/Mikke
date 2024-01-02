@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Ira_1, Lotti_1 } from '@/public/assets/shirts';
+import { Ira_1, Lotti_1 } from '@/public/assets/collared-shirts';
 import { shirts } from '@/constants';
 import Card from '@/components/Card';
 
