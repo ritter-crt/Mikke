@@ -1,5 +1,5 @@
 import { CollabShirts, shirts } from '@/constants';
-import { Hero } from '@/public/assets/shirts';
+import { Hero } from '@/public/assets/collared-shirts';
 import Image from 'next/image';
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
       <div class="mb-24 overflow-x-scroll overflow-y-hidden whitespace-nowrap">
         {CollabShirts.map((shirt) => (
           <>
-            <div class="w-250 h-250 mx-2 mb-12 inline-block h-60 mb-12">
+            <div className="w-250 h-250 mx-2 mb-12 inline-block h-60 mb-12">
               <Image src={shirt.images[0]} width={200} height={20}></Image>
             </div>
           </>
