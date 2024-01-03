@@ -1,15 +1,14 @@
-import { Shirt } from '@/models/Shirt';
 import { connectToDB } from '@/utils/connect';
-import { NextResponse } from 'next/server';
+import Shirt from '@/models/Shirt';
 
 export const GET = async (request) => {
   try {
     await connectToDB();
-    const data = await Shirt.find();
-    console.log(data);
-    return NextResponse.json(JSON.stringify(data), { status: 200 });
-  } catch (err) {
-    console.log(err);
-    throw new NextResponse('Failed to fetch shirts!');
+
+    const shirts = await Shirt.find();
+
+    return new Response(JSON.stringify(shirts), { status: 200 });
+  } catch (error) {
+    return new Response('Failed to fetch all shirts', { status: 500 });
   }
 };
