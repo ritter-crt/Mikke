@@ -1,20 +1,16 @@
 import Shirt from '@/models/Shirt';
 import { connectToDB } from '@/utils/connect';
+import { NextResponse } from 'next/server';
 
 export const GET = async (request, { params }) => {
+  const { id } = params;
   try {
-    await connectToDB();
+    connectToDB();
 
-    // Assuming params.id is the shirt's ID
-    const shirt = await Shirt.findById(params.id).populate('creator');
-
-    if (!shirt) {
-      return new Response('Shirt not found', { status: 404 });
-    }
-
-    return new Response(JSON.stringify(shirt), { status: 200 });
-  } catch (error) {
-    console.error('Error fetching shirt details:', error);
-    return new Response('Failed to fetch shirt details', { status: 500 });
+    const shirt = await Shirt.findOne({ id });
+    return NextResponse.json(shirt);
+  } catch (err) {
+    console.log(err);
+    throw new Error('Failed to fetch shirt!');
   }
 };

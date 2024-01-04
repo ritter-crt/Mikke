@@ -1,35 +1,47 @@
-// Import necessary modules
-'use client';
+import { getShirt } from '@/utils/data';
 
-import { useRouter } from 'next/navigation';
-import React, { useEffect, useState } from 'react';
+const getData = async (id) => {
+  const res = await fetch(`http://localhost:3000/api/shirts/${id}`);
 
-// Define the ShirtPage component
-const ShirtPage = () => {
-  const router = useRouter();
-  const [shirtDetail, setShirtDetail] = useState(null);
+  if (!res.ok) {
+    throw new Error('Something went wrong');
+  }
 
-  useEffect(() => {
-    const fetchPosts = async () => {
-      const response = await fetch(`/api/shirts/${id}`);
-      const data = await response.json();
+  return res.json();
+};
 
-      setShirtDetail(data);
-    };
+export const generateMetadata = async ({ params }) => {
+  const { id } = params;
 
-    if (id) fetchPosts();
-  }, [id]);
+  const shirt = await getShirt(id);
 
-  if (shirtDetail) {
-    const { title, _id } = shirtDetail;
+  return {
+    title: shirt.title,
+  };
+};
 
+const SingleShirtPage = async ({ params }) => {
+  const { id } = params;
+
+  // FETCH DATA WITH AN API
+  const shirt = await getData(id);
+
+  // FETCH DATA WITHOUT AN API
+  // const post = await getPost(id);
+
+  try {
     return (
       <>
         <div className="font-thin uppercase items-center justify-between p-40 bg-slate-500 text-4xl">
-          HELLO
+          <div>{shirt.price}</div>
+          <div>{description}</div>
         </div>
       </>
     );
+  } catch (error) {
+    console.error(error);
+    return null;
   }
 };
-export default ShirtPage;
+
+export default SingleShirtPage;

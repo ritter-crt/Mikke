@@ -1,8 +1,8 @@
-import { Shirt } from '../models/Shirt';
+import Shirt from '@/models/Shirt';
 
 export const getShirts = async () => {
   try {
-    connectToDb();
+    connectToDB();
     const shirts = await Shirt.find();
     return shirts;
   } catch (err) {
@@ -13,8 +13,8 @@ export const getShirts = async () => {
 
 export const getShirt = async (id) => {
   try {
-    connectToDb();
-    const shirt = await Shirt.findById({ id });
+    connectToDB();
+    const shirt = await Shirt.findbyId({ id });
     return shirt;
   } catch (err) {
     console.log(err);
