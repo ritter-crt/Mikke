@@ -18,7 +18,11 @@ const Nav = () => {
           {/* LOGO */}
           <div className="w-12 md:w-16 lg:w-20">
             <Link href="/">
-              <Image src={mikkeLogo} alt="Logo" objectFit="contain" />
+              <Image
+                src={mikkeLogo}
+                alt="Logo"
+                style={{ objectFit: 'contain' }}
+              />
             </Link>
           </div>
           {/* HAMBURGER BUTTON FOR MOBILE */}

@@ -15,10 +15,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <main className="app">
-          <Nav></Nav>
+          {/* <Nav></Nav> */}
           {children}
         </main>
-        <Footer />
+        {/* <Footer /> */}
       </body>
     </html>
   );
