@@ -1,5 +1,5 @@
-import Shirt from '@/models/Shirt';
-import { connectToDB } from '@/utils/connect';
+import Shirt from '@/db/models/Shirt';
+import { connectToDB } from '@/db/connect';
 import { NextResponse } from 'next/server';
 
 export const GET = async (request, { params }) => {
@@ -7,7 +7,8 @@ export const GET = async (request, { params }) => {
   try {
     connectToDB();
 
-    const shirt = await Shirt.findOne({ id });
+    const shirt = await Shirt.findById(id);
+
     return NextResponse.json(shirt);
   } catch (err) {
     console.log(err);

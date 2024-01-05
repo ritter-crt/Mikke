@@ -2,7 +2,10 @@ import Card from '@/components/Card';
 
 const getData = async () => {
   const res = await fetch('http://localhost:3000/api/shirts', {
-    next: { revalidate: 3600 },
+    headers: {
+      'Cache-Control': 'no-store',
+      'must-revalidate': 'true', // Add this header to ensure fresh data
+    },
   });
 
   if (!res.ok) {

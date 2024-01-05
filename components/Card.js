@@ -1,13 +1,20 @@
 'use client';
 import Image from 'next/image';
 import { useRouter } from 'next/navigation';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Card = ({ shirts }) => {
   const router = useRouter();
+
+  const [shirtsData, setShirtsData] = useState(shirts);
+
+  useEffect(() => {
+    setShirtsData(shirts);
+  }, [shirts]);
+
   return (
     <>
-      {shirts.map((shirt) => {
+      {shirtsData.map((shirt) => {
         return (
           <div key={shirt._id}>
             <div
