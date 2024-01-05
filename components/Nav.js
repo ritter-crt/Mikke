@@ -1,6 +1,7 @@
 'use client';
-import { navLinks } from '@/constants';
-import { mikkeLogo } from '@/public/assets/icons';
+
+import { mikkeLogo } from '@/public/assets';
+import { navLinks } from '@/utils/constants';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';

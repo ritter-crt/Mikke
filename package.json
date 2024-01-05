@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
+    "flowbite": "^2.2.1",
+    "flowbite-react": "^0.7.2",
     "framer-motion": "^10.12.18",
     "mongoose": "^8.0.3",
     "next": "^14.0.4",
