@@ -1,35 +1,22 @@
-'use client';
 import Card from '@/components/Card';
-import Image from 'next/image';
-import React, { useEffect, useState } from 'react';
 
-async function getData() {
+const getData = async () => {
   const res = await fetch('http://localhost:3000/api/shirts', {
-    cache: 'no-store',
+    headers: {
+      'Cache-Control': 'no-store',
+      'must-revalidate': 'true', // Add this header to ensure fresh data
+    },
   });
+
   if (!res.ok) {
-    throw new Error('Failed to fetch data');
+    throw new Error('Something went wrong');
   }
+
   return res.json();
-}
+};
 
-const CollaredShirts = () => {
-  const [shirts, setShirts] = useState([]);
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getData();
-        setShirts(data);
-      } catch (error) {
-        console.error('Error fetching shirts:', error.message);
-      }
-    };
-
-    fetchData();
-  }, []); // The empty dependency array ensures that the effect runs only once after the initial render
-
-  console.log('DATA_____________', shirts);
+const CollaredShirts = async () => {
+  const shirts = await getData();
 
   return (
     <main>

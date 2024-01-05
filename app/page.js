@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen z-2">
-      <div className="h-full w-full md:mt-24 mt-4">
+      {/* <div className="h-full w-full md:mt-24 mt-4">
         <Image src={Hero} sizes="10%" priority={true} objectFit="cover" />
       </div>
       <div className="text-center tracking-wide font-thin my-6 mx-12">
@@ -23,7 +23,7 @@ export default function Home() {
             </div>
           </>
         ))}
-      </div>
+      </div> */}
 
       {/* <div className="text-center font-light text-xs md:text-sm mt-4 md:mt-4">
         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
