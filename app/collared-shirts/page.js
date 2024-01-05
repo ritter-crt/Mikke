@@ -1,22 +1,10 @@
 import Card from '@/components/Card';
-
-const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/shirts', {
-    headers: {
-      'Cache-Control': 'no-store',
-      'must-revalidate': 'true', // Add this header to ensure fresh data
-    },
-  });
-
-  if (!res.ok) {
-    throw new Error('Something went wrong');
-  }
-
-  return res.json();
-};
+import { connectToDB } from '@/db/connect';
+import Shirt from '@/db/models/Shirt';
 
 const CollaredShirts = async () => {
-  const shirts = await getData();
+  connectToDB();
+  const shirts = await Shirt.find();
 
   return (
     <main>

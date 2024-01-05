@@ -15,6 +15,7 @@ const Card = ({ shirts }) => {
   return (
     <>
       {shirtsData.map((shirt) => {
+        shirt._id = shirt._id.toString();
         return (
           <div key={shirt._id}>
             <div
