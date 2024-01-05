@@ -1,4 +1,4 @@
-import { footerLinks } from '@/constants';
+import { footerLinks } from '@/utils/constants';
 import Link from 'next/link';
 import React from 'react';
 

@@ -6,15 +6,11 @@ import React, { useEffect, useState } from 'react';
 const Card = ({ shirts }) => {
   const router = useRouter();
 
-  const [shirtsData, setShirtsData] = useState(shirts);
-
-  useEffect(() => {
-    setShirtsData(shirts);
-  }, [shirts]);
-
   return (
     <>
-      {shirtsData.map((shirt) => {
+      {shirts.map((shirt) => {
+        shirt._id = shirt._id.toString();
+
         return (
           <div key={shirt._id}>
             <div
